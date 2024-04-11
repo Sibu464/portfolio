@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my webpage</title>
-    <navbar>Nav</navbar>
+   
     <link
       rel="stylesheet"
       type="text/css"
@@ -12,29 +12,51 @@
     />
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
   </head>
-  <body>
-    <section id="row">
-      <div class="column1">Sidebar</div>
+  <body onload="typeWriter()">
+    <navbar>Nav
+      <img src="https://images.pexels.com/photos/1929561/pexels-photo-1929561.jpeg?cs=srgb&dl=pexels-tobias-aeppli-1929561.jpg&fm=jpg" class="logo">
+    </navbar>
+    <div class="columns">
+      <div class="column1">
+        <h1>My Side bar </h1>
+        <h2>Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Aut, libero iusto id, est, et ipsam in consequatur possimus necessitatibus tempora laborum dignissimos? Aut 
+          quos consequatur earum modi voluptates odio tenetur!</h2>
+      </div>
       <div class="column2">
-        <h1>Dashboard</h1>
+        
         <img
           src="https://images.pexels.com/photos/1929561/pexels-photo-1929561.jpeg?cs=srgb&dl=pexels-tobias-aeppli-1929561.jpg&fm=jpg"
         />
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-          nisi culpa enim soluta aliquid non, provident officiis blanditiis.
-          Quam eligendi corporis quos et officiis harum deleniti veniam beatae
-          ad. Accusantium.
+      
+       
+        <h2 id="demo">
+        
         </h2>
       </div>
-    </section>
+    </div>
 
-    <div>
+
+    <div class="words">
       <h2 class="h2">Technical skills</h2>
       <h2>Soft skills</h2>
     </div>
     <footer>
-      <p>Copyright 2020 &copy;</p>
+      <p class="footer">Copyright 2020 &copy;</p>
     </footer>
+    <script>
+      var i = 0;
+      var txt =   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. \n Asperiores nisi culpa enim soluta aliquid non, \n provident officiis blanditiis. \n Quam eligendi corporis quos et officiis harum deleniti veniam beata';
+       
+      var speed = 70;
+      
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      </script>
   </body>
 </html>
